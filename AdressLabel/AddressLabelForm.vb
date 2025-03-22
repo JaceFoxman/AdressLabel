@@ -8,6 +8,13 @@ Option Compare Text
 Option Explicit On
 Option Strict On
 Public Class AddressLabelForm
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    ''' <summary>
+    ''' Sets text boxes to be empty on boot up.
+    ''' </summary>
     Sub SetDefaults()
         FirstNameTextBox.Text = ""
         LastNameTextBox.Text = ""
@@ -18,10 +25,11 @@ Public Class AddressLabelForm
         ClearButton.Enabled = False
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
-
+    ''' <summary>
+    ''' Checks each text box to see if User has added the correct content before updating the diplay label. If fale display a warning to user.
+    ''' </summary>
+    ''' <returns></returns>
     Function UserInput() As Boolean
         Dim valid As Boolean = True
         Dim errorMessage As String
@@ -67,25 +75,46 @@ Public Class AddressLabelForm
         Return valid
     End Function
 
+    ''' <summary>
+    ''' Sets the formating for how the display label will take the user input and display it.
+    ''' </summary>
     Sub FormatDisplayLabel()
         DisplayLabel.Text = FirstNameTextBox.Text & " " & LastNameTextBox.Text & vbNewLine _
         & StreetAddressTextBox.Text & vbNewLine _
         & CityTextBox.Text & ", " & StateTextBox.Text & " " & ZipTextBox.Text
     End Sub
 
+    ''' <summary>
+    ''' Causesdisplay label to "Update" to a blank string.
+    ''' </summary>
     Sub Clear()
         DisplayLabel.Text = ""
     End Sub
 
+    ''' <summary>
+    ''' When button is pressed run User Input check and display information or warning label,
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub DisplayButton_Click(sender As Object, e As EventArgs) Handles DisplayButton.Click
         If UserInput() Then
             FormatDisplayLabel()
         End If
     End Sub
-
+    ''' <summary>
+    ''' When pressed clear display label
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         Clear()
     End Sub
+
+    ''' <summary>
+    ''' When pressed exit program
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub
