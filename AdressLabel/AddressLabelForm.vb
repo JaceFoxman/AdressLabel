@@ -34,6 +34,11 @@ Public Class AddressLabelForm
         Dim valid As Boolean = True
         Dim errorMessage As String
 
+        If IsNumeric(ZipTextBox.Text) = False Then
+            ZipTextBox.Focus()
+            errorMessage &= "Enter A Numeric Zip Code." & vbNewLine
+        End If
+
         If FirstNameTextBox.Text = "" Then
             valid = False
             FirstNameTextBox.Focus()
@@ -64,10 +69,6 @@ Public Class AddressLabelForm
             errorMessage &= "Enter a State." & vbNewLine
         End If
 
-        If IsNumeric(ZipTextBox.Text) = False Then
-            ZipTextBox.Focus()
-            errorMessage &= "Enter A Numeric Zip Code." & vbNewLine
-        End If
 
         If Not valid Then
             MsgBox(errorMessage, MsgBoxStyle.Exclamation, "User Input Fail")
@@ -118,4 +119,5 @@ Public Class AddressLabelForm
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub
+
 End Class
