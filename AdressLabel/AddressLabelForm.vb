@@ -35,6 +35,7 @@ Public Class AddressLabelForm
         Dim errorMessage As String
 
         If IsNumeric(ZipTextBox.Text) = False Then
+            valid = False
             ZipTextBox.Focus()
             errorMessage &= "Enter A Numeric Zip Code." & vbNewLine
         End If
