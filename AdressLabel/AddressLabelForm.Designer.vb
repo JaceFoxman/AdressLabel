@@ -78,7 +78,7 @@ Partial Class AddressLabelForm
         '
         'ZipTextBox
         '
-        Me.ZipTextBox.Location = New System.Drawing.Point(14, 347)
+        Me.ZipTextBox.Location = New System.Drawing.Point(14, 352)
         Me.ZipTextBox.Name = "ZipTextBox"
         Me.ZipTextBox.Size = New System.Drawing.Size(112, 26)
         Me.ZipTextBox.TabIndex = 6
@@ -172,6 +172,7 @@ Partial Class AddressLabelForm
         'DisplayButton
         '
         Me.DisplayButton.BackColor = System.Drawing.Color.SeaShell
+        Me.DisplayButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayButton.Location = New System.Drawing.Point(373, 328)
         Me.DisplayButton.Name = "DisplayButton"
         Me.DisplayButton.Size = New System.Drawing.Size(136, 110)
@@ -183,6 +184,7 @@ Partial Class AddressLabelForm
         'ClearButton
         '
         Me.ClearButton.BackColor = System.Drawing.Color.Lavender
+        Me.ClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClearButton.Location = New System.Drawing.Point(515, 328)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(126, 110)
@@ -194,6 +196,7 @@ Partial Class AddressLabelForm
         'ExitButton
         '
         Me.ExitButton.BackColor = System.Drawing.Color.LavenderBlush
+        Me.ExitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitButton.Location = New System.Drawing.Point(647, 328)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(141, 110)
@@ -205,19 +208,19 @@ Partial Class AddressLabelForm
         'OutputGroupBox
         '
         Me.OutputGroupBox.Controls.Add(Me.DisplayLabel)
-        Me.OutputGroupBox.Location = New System.Drawing.Point(383, 18)
+        Me.OutputGroupBox.Location = New System.Drawing.Point(373, 18)
         Me.OutputGroupBox.Name = "OutputGroupBox"
-        Me.OutputGroupBox.Size = New System.Drawing.Size(405, 297)
+        Me.OutputGroupBox.Size = New System.Drawing.Size(415, 297)
         Me.OutputGroupBox.TabIndex = 7
         Me.OutputGroupBox.TabStop = False
         Me.OutputGroupBox.Text = "Adress Label"
         '
         'DisplayLabel
         '
-        Me.DisplayLabel.Font = New System.Drawing.Font("Consolas", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DisplayLabel.Location = New System.Drawing.Point(23, 42)
+        Me.DisplayLabel.Font = New System.Drawing.Font("Consolas", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisplayLabel.Location = New System.Drawing.Point(22, 40)
         Me.DisplayLabel.Name = "DisplayLabel"
-        Me.DisplayLabel.Size = New System.Drawing.Size(321, 117)
+        Me.DisplayLabel.Size = New System.Drawing.Size(368, 227)
         Me.DisplayLabel.TabIndex = 0
         '
         'AddressLabelForm
